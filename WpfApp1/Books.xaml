@@ -1,0 +1,68 @@
+﻿<Page x:Class="WpfApp1.Books"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Books">
+
+    <Grid>
+        <ListView d:ItemsSource="{Binding Книги}" 
+                  Margin="0,67,0,0" 
+                  x:Name="Autos" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid MouseLeftButtonDown="Autos_MouseLeftButtonDown">
+
+                        <TextBlock x:Name="name" 
+                                   Margin="10,0,0,0">
+                            <Run Text="Название: "/>
+                            <Run Text = "{Binding Название}"/>
+                            <Run Text=" |"/>  
+                            <Run Text=" Жанр: "/> 
+                            <Run Text="{Binding Жанр}"/>
+                            <Run Text=" "/>
+                        <Run/><LineBreak/>
+                        <Run Text="Автор: "/>
+                        <Run Text="{Binding Автор}"/>
+                        <Run Text=" "/>
+                        <Run/><LineBreak/>
+                        <Run Text="Цена: "/>
+                        <Run Text="{Binding Цена}"/>
+                        <Run Text=" "/>
+                        <Run/><LineBreak/>
+                        <Run Text="Количество в магазине: "/>
+                        <Run Text="{Binding Кол-во_в_магазине}"/>
+                        <Run Text=" "/>
+                        <Run/><LineBreak/>
+                        <Run Text="Количество на складе: "/>
+                        <Run Text="{Binding Кол-во_на_складе}"/>
+                        <Run Text=" "/>
+                        <Run/><LineBreak/>
+                        <Run Text="Описание: "/>
+                        <Run Text="{Binding Описание}"/>
+                        <Run Text=" "/>
+                        <Run/><LineBreak/>
+                        </TextBlock>
+                        <Image Source="{Binding Image}" 
+                               Margin="400,0,0,0" 
+                               Width =" 200" 
+                               Height="200"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <TextBox HorizontalAlignment="Left" 
+                 Margin="69,29,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 x:Name="Poisk" 
+                 TextChanged="Poisk_TextChanged"/>
+
+
+    </Grid>
+</Page>
