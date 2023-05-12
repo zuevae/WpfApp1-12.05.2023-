@@ -21,14 +21,14 @@ namespace WpfApp1
     public partial class Books : Page
     {
         public Frame frame1;
-        List<Книги> auto = new List<Книги>();
+        List<Книги> книгиs = new List<Книги>();
 
         public Books(Frame frame)
         {
             InitializeComponent();
             frame1 = frame;
-            auto = Entities.GetContext().Книги.ToList();
-            Autos.ItemsSource = auto;
+            книгиs = Entities.GetContext().Книги.ToList();
+            Autos.ItemsSource = книгиs;
         }
 
         private void Poisk_TextChanged(object sender, TextChangedEventArgs e)

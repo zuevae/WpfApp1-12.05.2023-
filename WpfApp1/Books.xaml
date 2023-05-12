@@ -48,13 +48,12 @@
                         </TextBlock>
                         <Image Source="{Binding Image}" 
                                Margin="400,0,0,0" 
-                               Width =" 200" 
+                               Width ="200" 
                                Height="200"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
         <TextBox HorizontalAlignment="Left" 
                  Margin="69,29,0,0" 
                  TextWrapping="Wrap" 
