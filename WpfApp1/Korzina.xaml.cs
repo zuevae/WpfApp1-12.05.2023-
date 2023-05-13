@@ -20,14 +20,16 @@ namespace WpfApp1
     /// </summary>
     public partial class Korzina : Page
     {
+        public Frame frame1;
         public Korzina(Frame frame)
         {
             InitializeComponent();
+            frame1 = frame;
         }
 
-        private async void Autos_MouseLeftButtonDown1(object sender, MouseButtonEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            frame1.Navigate(new Books(frame1));
         }
     }
 }

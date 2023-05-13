@@ -14,12 +14,24 @@
                   x:Name="Autos" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid MouseLeftButtonDown="Autos_MouseLeftButtonDown1">
+                    <Grid>
 
-                        
+
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Content="Выход" 
+                HorizontalAlignment="Left" 
+                Margin="721,25,0,0" 
+                VerticalAlignment="Top" 
+                Click="Button_Click" 
+                Width="43"/>
+        <Button Content="Оформить заказ" 
+                HorizontalAlignment="Left" 
+                Margin="600,25,0,0" 
+                VerticalAlignment="Top" 
+                Click="Button_Click" 
+                Width="100"/>
     </Grid>
 </Page>

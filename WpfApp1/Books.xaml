@@ -24,32 +24,39 @@
                             <Run Text=" Жанр: "/> 
                             <Run Text="{Binding Жанр}"/>
                             <Run Text=" "/>
-                        <Run/><LineBreak/>
-                        <Run Text="Автор: "/>
-                        <Run Text="{Binding Автор}"/>
-                        <Run Text=" "/>
-                        <Run/><LineBreak/>
-                        <Run Text="Цена: "/>
-                        <Run Text="{Binding Цена}"/>
-                        <Run Text=" "/>
-                        <Run/><LineBreak/>
-                        <Run Text="Количество в магазине: "/>
-                        <Run Text="{Binding Кол-во_в_магазине}"/>
-                        <Run Text=" "/>
-                        <Run/><LineBreak/>
-                        <Run Text="Количество на складе: "/>
-                        <Run Text="{Binding Кол-во_на_складе}"/>
-                        <Run Text=" "/>
-                        <Run/><LineBreak/>
-                        <Run Text="Описание: "/>
-                        <Run Text="{Binding Описание}"/>
-                        <Run Text=" "/>
-                        <Run/><LineBreak/>
+                            <Run/><LineBreak/>  //перенос строки
+                            <Run Text="Автор: "/>
+                            <Run Text="{Binding Автор}"/>
+                            <Run Text=" "/>
+                            <Run/><LineBreak/>
+                            <Run Text="Цена: "/>
+                            <Run Text="{Binding Цена}"/>
+                            <Run Text="руб."/>
+                            <Run Text=" "/>
+                            <Run/><LineBreak/>
+                            <Run Text="Количество в магазине: "/>
+                            <Run Text="{Binding Кол-во_в_магазине}"/>
+                            <Run Text=" "/>
+                            <Run/><LineBreak/>
+                            <Run Text="Количество на складе: "/>
+                            <Run Text="{Binding Кол-во_на_складе}"/>
+                            <Run Text=" "/>
+                            <Run/><LineBreak/>
+                            <Run Text="Описание: "/>
+                            <Run Text="{Binding Описание}"/>
+                            <Run Text=" "/>
+                            <Run/><LineBreak/>
                         </TextBlock>
-                        <Image Source="{Binding Image}" 
+                        <Image Source="{Binding Обложка}" 
                                Margin="400,0,0,0" 
                                Width ="200" 
                                Height="200"/>
+                        <Button x:Name="add"
+                                Content="Добавить в корзину"
+                                Height="20"
+                                Width="160" 
+                                Margin="10,106,730,324"
+                                Click="add_Click"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -61,7 +68,11 @@
                  Width="120" 
                  x:Name="Poisk" 
                  TextChanged="Poisk_TextChanged"/>
-
+        <Button Content="Корзина" 
+                HorizontalAlignment="Left" 
+                Margin="709,27,0,0" 
+                VerticalAlignment="Top" 
+                Click="Button_Click"/>
 
     </Grid>
 </Page>

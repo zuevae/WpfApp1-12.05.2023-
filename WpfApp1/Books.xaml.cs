@@ -47,7 +47,14 @@ namespace WpfApp1
         {
             await Task.Delay(100);
             object j = Autos.SelectedItem;
-            //frame1.Navigate(new update(frame1, j));
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new Korzina(frame1));
+        }
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new Korzina(frame1));
         }
     }
 }
